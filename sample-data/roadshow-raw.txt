@@ -1,0 +1,29 @@
+[00:00:05] Speaker 1: good morning everyone, uh welcome. we're delighted to host the management team of Northwind Robotics today as part of their pre-IPO roadshow. with us are the CEO and the CFO. i'll hand it over to management for opening remarks and then we'll go to investor questions
+
+[00:00:24] Speaker 2: thank you, good morning everybody. so Northwind, quick background, we make autonomous mobile robots for warehouse intralogistics. uh we were founded seven years ago, we have about twelve hundred employees today. last year we did roughly four hundred twenty million in revenue, growing at about sixty percent, and we turned uh gross margin positive on hardware two years ago, blended gross margin is now around thirty eight percent
+
+[00:01:02] Speaker 2: the business has three segments. hardware which is the robots themselves, that's about sixty percent of revenue. software subscriptions, our fleet orchestration platform, about twenty five percent and growing fastest. and services, deployment and maintenance, the remainder. our thesis is simple, labor scarcity in warehousing is structural and the payback period on our system is now under eighteen months which is is really the magic number for procurement
+
+[00:01:38] Speaker 3: and from a financial standpoint, just briefly, we have about three hundred million of cash on the balance sheet, no debt, and we expect to be free cash flow break even uh within six quarters. the IPO proceeds are primarily for capacity expansion in southeast asia and accelerating the software roadmap
+
+[00:02:01] Speaker 1: thank you. let's open it up. first question here in the front
+
+[00:02:06] Speaker 4: thanks. can you talk about customer concentration, what percent of revenue comes from your top three customers
+
+[00:02:13] Speaker 3: sure, top three is about thirty four percent of revenue, down from forty eight two years ago. our largest customer, a global e-commerce player, is about fifteen percent. we're comfortable with the trajectory, the the new logo pipeline is the strongest it's ever been
+
+[00:02:33] Speaker 5: a question on competition, uh how do you differentiate against the chinese AMR vendors who are pricing thirty percent below you
+
+[00:02:42] Speaker 2: yeah so, price matters but uptime matters more. our fleet availability is ninety nine point two percent measured across the installed base and that's contractual for us. when a sortation line stops, the customer loses more in an hour than the the price difference on the entire fleet. we also win on the software layer, multi-vendor orchestration, which the the point solution vendors don't have. that said we're not naive about it, we are taking cost out of the platform every generation, the new model is eighteen percent cheaper to build
+
+[00:03:21] Speaker 4: follow up, what's the software net revenue retention
+
+[00:03:25] Speaker 3: net revenue retention on the software side is one hundred thirty one percent as of last quarter
+
+[00:03:33] Speaker 1: we have time for one more
+
+[00:03:36] Speaker 5: on the IPO itself, can you say anything about valuation expectations relative to your last private round
+
+[00:03:43] Speaker 3: ha, nice try. uh what i can say is the last round was two and a half years ago in a very different market and the business has more than doubled since. we'll let the the bookbuild speak for itself
+
+[00:03:57] Speaker 1: on that note, thank you all for coming, management will be available for small group meetings this afternoon

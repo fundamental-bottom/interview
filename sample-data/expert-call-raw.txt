@@ -1,0 +1,23 @@
+[00:00:03] Speaker 1: okay i think we're recording now um thanks for joining everyone. today we have an expert who spent uh eight years in the power semiconductor industry, most recently as VP of sales at a leading silicon carbide device maker. let's jump right in. um, first question, how do you see silicon carbide adoption in EV inverters over the next two years
+
+[00:00:31] Speaker 2: yeah sure so, look, the the main thing to understand is that the eight hundred volt platforms are really the the forcing function here. every major OEM that's moving to 800 volt is is basically committed to silicon carbide in the main inverter. the question is not if, it's it's really about second sourcing and and pricing. we saw prices come down i'd say fifteen to twenty percent uh year over year
+
+[00:01:02] Speaker 1: and is that price decline mostly yield improvement or is it competition
+
+[00:01:08] Speaker 2: it's both but honestly competition is the bigger driver right now. the chinese device makers have gotten um surprisingly good. their crystal quality on six inch is is basically at parity now and they're pricing aggressively to win design-ins. the the incumbents still win on on automotive qualification track record but that moat is is eroding
+
+[00:01:35] Speaker 1: got it. um what about the shift to eight inch wafers, who's actually shipping in volume
+
+[00:01:42] Speaker 2: so on eight inch, real volume, honestly nobody yet. there's a lot of of press releases let's say. the leaders have pilot lines running and i'd expect meaningful volume second half of next year. the cost crossover versus six inch probably doesn't happen until the year after that because the the substrate cost on eight inch is still quite high
+
+[00:02:10] Speaker 3: can i jump in, um, on the substrate side specifically, do you think the merchant substrate makers keep their margin structure or does vertical integration squeeze them
+
+[00:02:22] Speaker 2: great question. i think the merchant guys are in a tough spot. uh the biggest device makers are all bringing substrate in house, some through acquisition some organic. the merchant market that's left over is increasingly the the chinese domestic market which is brutal on price. so margins compress, i think that's that's pretty much consensus at this point internally in the industry
+
+[00:02:51] Speaker 1: okay and last one from me, if you had to pick one underappreciated risk for the sector what would it be
+
+[00:02:59] Speaker 2: honestly, gallium nitride at higher voltages. everyone has written GaN off for the main inverter but there's some some genuinely interesting work on on 1200 volt GaN. if that matures faster than expected the whole silicon carbide capex story gets uh gets complicated. low probability but nobody is pricing it
+
+[00:03:24] Speaker 1: great, that's all we have time for, thanks so much for the the insights, really appreciate it
+
+[00:03:30] Speaker 2: my pleasure, happy to follow up anytime
