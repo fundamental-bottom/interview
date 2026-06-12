@@ -1,0 +1,83 @@
+// Data model for the meeting transcript platform.
+//
+// SQLite does not support native enums, so enum-like columns (meetingType,
+// status, source) are strings validated at the application boundary with zod
+// (see lib/types.ts).
+
+datasource db {
+  provider = "sqlite"
+}
+
+generator client {
+  provider = "prisma-client"
+  output   = "../generated/prisma"
+}
+
+// The anchor entity: every transcript and job hangs off an event.
+model CalendarEvent {
+  id          String   @id @default(cuid())
+  title       String
+  meetingType String // EXPERT_CALL | ROADSHOW | WEEKLY_GROUP_CALL
+  startTime   DateTime // UTC instant
+  endTime     DateTime // UTC instant
+  timezone    String // IANA zone the times were entered in, used for display
+  status      String   @default("SCHEDULED") // SCHEDULED | COMPLETED | CANCELLED
+  createdAt   DateTime @default(now())
+
+  rawTranscript     RawTranscript?
+  processedVersions ProcessedTranscriptVersion[]
+  jobs              TranscriptJob[]
+}
+
+// What speech recognition produced. Immutable once attached: there is no
+// update path in the application, and one raw transcript per event (enforced
+// by the unique eventId).
+model RawTranscript {
+  id        String   @id @default(cuid())
+  eventId   String   @unique
+  event     CalendarEvent @relation(fields: [eventId], references: [id], onDelete: Cascade)
+  content   String
+  fileName  String? // set when attached via file upload
+  createdAt DateTime @default(now())
+
+  jobs TranscriptJob[]
+}
+
+// One row per generated or hand-edited processed transcript. The "current"
+// transcript is simply the row with the highest version for the event;
+// older rows are the history.
+model ProcessedTranscriptVersion {
+  id        String   @id @default(cuid())
+  eventId   String
+  event     CalendarEvent @relation(fields: [eventId], references: [id], onDelete: Cascade)
+  version   Int
+  segments  String // JSON: Segment[] — ordered { speaker, text, timestamp }
+  summary   String // JSON: SummaryDocument — per-meeting-type structured summary
+  source    String // PIPELINE | MANUAL_EDIT
+  jobId     String?  @unique // the job that produced it, when source = PIPELINE
+  job       TranscriptJob? @relation(fields: [jobId], references: [id])
+  createdAt DateTime @default(now())
+
+  @@unique([eventId, version])
+}
+
+// Explicit state for the async processing pipeline:
+// PENDING -> PROCESSING -> COMPLETED | FAILED.
+// attempts counts how many times execution started (retry keeps the count).
+model TranscriptJob {
+  id              String   @id @default(cuid())
+  eventId         String
+  event           CalendarEvent @relation(fields: [eventId], references: [id], onDelete: Cascade)
+  rawTranscriptId String
+  rawTranscript   RawTranscript @relation(fields: [rawTranscriptId], references: [id], onDelete: Cascade)
+  status          String   @default("PENDING") // PENDING | PROCESSING | COMPLETED | FAILED
+  attempts        Int      @default(0)
+  error           String?
+  createdAt       DateTime @default(now())
+  startedAt       DateTime?
+  finishedAt      DateTime?
+
+  resultVersion ProcessedTranscriptVersion?
+
+  @@index([status])
+}

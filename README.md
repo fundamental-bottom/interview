@@ -1,5 +1,21 @@
 # Funda Take-Home: Meeting Transcript Platform
 
+## Quick start (solution)
+
+```bash
+npm install
+npm run setup   # prisma generate + migrate + seed (3 demo events)
+npm run dev     # http://localhost:3000
+```
+
+`npm test` runs the suite (63 tests). See [DESIGN.md](DESIGN.md) for the data model, pipeline, and trade-offs.
+
+Demo walkthrough: open a seeded event → **Load sample for this meeting type** (or paste/upload a `.txt`) → watch the job go `PENDING → PROCESSING → COMPLETED` → the processed transcript appears with the per-type summary. **Regenerate** or **Edit segments** to create new versions. To see the failure path, paste a sample with a line containing `[[FLAKY]]` added — the job fails on the first attempt and succeeds on **Retry** (a transcript with no `[HH:MM:SS] Speaker N:` lines fails permanently with a clear error).
+
+---
+
+*Original assignment below.*
+
 At Funda we record many kinds of investor meetings — expert calls, company roadshows, internal weekly group calls — and turn their recordings into clean, structured, searchable transcripts. This assignment asks you to build a miniature version of that system.
 
 **Timebox: aim for 4–6 focused hours.** We'd rather see a well-designed core than a feature-complete rush job. If you run out of time, write down what you'd do next in your design notes.
